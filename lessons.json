@@ -1,0 +1,177 @@
+{
+  "lessons": [
+    {
+      "id": "oop-intro",
+      "title": "مقدمة في البرمجة الكائنية (OOP) بلغة C#",
+      "description": "تعرف على أساسيات البرمجة الكائنية ومفهوم الكلاس والكائن في لغة C#",
+      "content": "ما هي البرمجة الكائنية؟\n\nالبرمجة الكائنية (Object-Oriented Programming - OOP) هي أسلوب في كتابة الكود يعتمد على تنظيم البرنامج في شكل \"كائنات\" (Objects) تمثل أشياء حقيقية أو مفاهيم.\n\nالمفاهيم الأساسية:\n\n📦 الكلاس (Class):\nهو القالب أو المخطط الذي نُعرّف من خلاله شكل الكائن وسلوكه.\nمثال: كلاس \"سيارة\" يحتوي على خصائص (لون، سرعة) ودوال (تحرك، وقف).\n\n🔵 الكائن (Object):\nهو نسخة حقيقية من الكلاس.\nمثال: سيارتي الحمراء هي كائن من كلاس \"سيارة\".\n\nمثال عملي بلغة C#:\n\n// تعريف الكلاس\npublic class Car {\n    // خصائص\n    public string Color { get; set; }\n    public int Speed { get; set; }\n\n    // منشئ الكلاس\n    public Car(string color, int speed) {\n        Color = color;\n        Speed = speed;\n    }\n\n    // دالة (Method)\n    public void DisplayInfo() {\n        Console.WriteLine($\"السيارة لونها {Color} وسرعتها {Speed} كم/ساعة\");\n    }\n}\n\n// استخدام الكلاس\nCar myCar = new Car(\"أحمر\", 120);\nmyCar.DisplayInfo();\n// الناتج: السيارة لونها أحمر وسرعتها 120 كم/ساعة\n\nلماذا نستخدم OOP؟\n\n✅ تنظيم الكود بشكل أفضل\n✅ إعادة استخدام الكود بسهولة\n✅ تقليل الأخطاء\n✅ سهولة الصيانة والتطوير",
+      "images": [
+        "https://via.placeholder.com/800x450/1d4ed8/ffffff?text=Class+vs+Object",
+        "https://via.placeholder.com/800x450/7c3aed/ffffff?text=OOP+Concepts"
+      ],
+      "videos": [
+        "https://www.youtube.com/embed/pTB0EiLXUC8"
+      ],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "ما الفرق بين الكلاس (Class) والكائن (Object)؟",
+          "options": [
+            "الكلاس هو القالب، والكائن هو النسخة الحقيقية منه",
+            "الكلاس والكائن نفس الشيء تمامًا",
+            "الكائن هو القالب، والكلاس هو النسخة",
+            "الكلاس يُستخدم فقط في لغة C#"
+          ],
+          "answer": 0
+        },
+        {
+          "id": 2,
+          "question": "ما الكلمة المفتاحية لإنشاء كائن جديد في C#؟",
+          "options": ["create", "object", "new", "init"],
+          "answer": 2
+        },
+        {
+          "id": 3,
+          "question": "ما هو المنشئ (Constructor) في C#؟",
+          "options": [
+            "دالة يتم استدعاؤها تلقائيًا عند إنشاء كائن جديد",
+            "دالة لحذف الكائن من الذاكرة",
+            "خاصية تُخزن بيانات الكائن",
+            "نوع خاص من الكلاسات"
+          ],
+          "answer": 0
+        },
+        {
+          "id": 4,
+          "question": "أي من التالي يمثل خاصية (Property) في الكلاس Car؟",
+          "options": [
+            "public void Drive() { }",
+            "public string Color { get; set; }",
+            "new Car()",
+            "Console.WriteLine()"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 5,
+          "question": "ما الهدف الرئيسي من البرمجة الكائنية؟",
+          "options": [
+            "تسريع تنفيذ البرنامج فقط",
+            "تنظيم الكود وإعادة استخدامه بسهولة",
+            "تقليل عدد الأسطر في البرنامج",
+            "تشغيل البرنامج على أنظمة متعددة"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "oop-inheritance",
+      "title": "الوراثة (Inheritance) في C#",
+      "description": "تعلم كيف يرث كلاس خصائص ودوال كلاس آخر وتوسيع قدراته",
+      "content": "ما هي الوراثة (Inheritance)؟\n\nالوراثة هي قدرة كلاس على \"اكتساب\" خصائص ودوال كلاس آخر.\nالكلاس الذي يَرث يُسمى: الكلاس الابن (Child/Derived Class)\nالكلاس الذي يُورث منه يُسمى: الكلاس الأب (Parent/Base Class)\n\nفائدة الوراثة:\n✅ تجنب تكرار الكود\n✅ بناء تسلسل هرمي منطقي\n✅ سهولة التوسع والإضافة\n\nمثال عملي:\n\n// الكلاس الأب\npublic class Animal {\n    public string Name { get; set; }\n    public int Age { get; set; }\n\n    public Animal(string name, int age) {\n        Name = name;\n        Age = age;\n    }\n\n    public void Eat() {\n        Console.WriteLine($\"{Name} يأكل الطعام\");\n    }\n\n    public virtual void Speak() {\n        Console.WriteLine($\"{Name} يصدر صوتًا\");\n    }\n}\n\n// الكلاس الابن: Dog يرث من Animal\npublic class Dog : Animal {\n    public string Breed { get; set; }\n\n    public Dog(string name, int age, string breed)\n        : base(name, age) // استدعاء منشئ الأب\n    {\n        Breed = breed;\n    }\n\n    // تعديل على دالة الأب\n    public override void Speak() {\n        Console.WriteLine($\"{Name} يقول: هاو هاو!\");\n    }\n\n    // دالة جديدة خاصة بـ Dog\n    public void Fetch() {\n        Console.WriteLine($\"{Name} يجلب الكرة!\");\n    }\n}\n\n// استخدام:\nDog myDog = new Dog(\"ريكس\", 3, \"لابرادور\");\nmyDog.Eat();    // من الأب ← ريكس يأكل الطعام\nmyDog.Speak();  // معدّل ← ريكس يقول: هاو هاو!\nmyDog.Fetch();  // خاص به ← ريكس يجلب الكرة!\n\nكلمات مفتاحية مهمة:\n\n🔑 : (النقطتان) — للوراثة: public class Dog : Animal\n🔑 base — للوصول لمنشئ أو دوال الأب\n🔑 virtual — للسماح بتعديل الدالة في الأبناء\n🔑 override — لتعديل دالة الأب في الابن\n🔑 sealed — لمنع الوراثة من هذا الكلاس",
+      "images": [
+        "https://via.placeholder.com/800x450/059669/ffffff?text=Inheritance+Diagram"
+      ],
+      "videos": [],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "ما الرمز المستخدم للوراثة في C#؟",
+          "options": [
+            "extends",
+            "implements",
+            ": (النقطتان)",
+            "inherits"
+          ],
+          "answer": 2
+        },
+        {
+          "id": 2,
+          "question": "ما الكلمة المفتاحية التي تسمح بتعديل دالة الأب في كلاس الابن؟",
+          "options": ["virtual", "override", "base", "sealed"],
+          "answer": 1
+        },
+        {
+          "id": 3,
+          "question": "ما فائدة كلمة `base` في C#؟",
+          "options": [
+            "لإنشاء كلاس أساسي جديد",
+            "للوصول إلى دوال ومنشئ الكلاس الأب",
+            "لمنع الوراثة",
+            "لتعريف خصائص الكلاس"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 4,
+          "question": "ماذا يعني تعريف دالة بـ `virtual` في الكلاس الأب؟",
+          "options": [
+            "الدالة لا يمكن استدعاؤها",
+            "الدالة ستُحذف في الكلاس الابن",
+            "يمكن للكلاس الابن تعديل هذه الدالة باستخدام override",
+            "الدالة خاصة بالكلاس الأب فقط"
+          ],
+          "answer": 2
+        },
+        {
+          "id": 5,
+          "question": "في المثال: `public class Dog : Animal` — ما الكلاس الأب والكلاس الابن؟",
+          "options": [
+            "Dog هو الأب، Animal هو الابن",
+            "Animal هو الأب، Dog هو الابن",
+            "كلاهما في نفس المستوى",
+            "لا توجد وراثة هنا"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 6,
+          "question": "أي مبدأ من مبادئ OOP يساعد على تجنب تكرار الكود؟",
+          "options": ["الكبسلة", "تعدد الأشكال", "الوراثة", "التجريد"],
+          "answer": 2
+        }
+      ]
+    },
+    {
+      "id": "oop-encapsulation",
+      "title": "الكبسلة (Encapsulation) في C#",
+      "description": "تعلم كيف تحمي بيانات الكلاس وتتحكم في الوصول إليها",
+      "content": "ما هي الكبسلة (Encapsulation)؟\n\nالكبسلة تعني إخفاء التفاصيل الداخلية للكلاس وعرض واجهة عامة فقط.\nمثل: ماكينة القهوة — تضغط زر وتحصل على القهوة، لكن لا تعرف كيف تعمل الآلة من الداخل!\n\nلماذا الكبسلة مهمة؟\n✅ حماية البيانات من التعديل الخاطئ\n✅ التحكم في كيفية قراءة/تعديل البيانات\n✅ تسهيل الصيانة والتطوير\n\nمستويات الوصول (Access Modifiers):\n\n🔒 private — يمكن الوصول من داخل الكلاس فقط\n🔓 public — يمكن الوصول من أي مكان\n🔐 protected — يمكن الوصول من الكلاس نفسه والأبناء\n\nمثال عملي:\n\npublic class BankAccount {\n    // private: لا يمكن الوصول مباشرة من الخارج\n    private double _balance;\n    private string _owner;\n\n    public BankAccount(string owner, double initialBalance) {\n        _owner = owner;\n        _balance = initialBalance > 0 ? initialBalance : 0;\n    }\n\n    // Property: للقراءة فقط (get بدون set)\n    public double Balance {\n        get { return _balance; }\n    }\n\n    // دالة عامة للإيداع مع تحقق\n    public void Deposit(double amount) {\n        if (amount > 0) {\n            _balance += amount;\n            Console.WriteLine($\"تم إيداع {amount} ريال. الرصيد الحالي: {_balance}\");\n        } else {\n            Console.WriteLine(\"خطأ: المبلغ يجب أن يكون موجبًا\");\n        }\n    }\n\n    // دالة للسحب مع تحقق\n    public void Withdraw(double amount) {\n        if (amount > 0 && amount <= _balance) {\n            _balance -= amount;\n            Console.WriteLine($\"تم سحب {amount} ريال. الرصيد الحالي: {_balance}\");\n        } else {\n            Console.WriteLine(\"خطأ: رصيد غير كافٍ أو مبلغ غير صحيح\");\n        }\n    }\n}\n\n// الاستخدام:\nBankAccount account = new BankAccount(\"أحمد\", 1000);\naccount.Deposit(500);   // تم إيداع 500 ريال. الرصيد الحالي: 1500\naccount.Withdraw(200);  // تم سحب 200 ريال. الرصيد الحالي: 1300\n// account._balance = 999999; // ❌ خطأ! لا يمكن الوصول المباشر\nConsole.WriteLine(account.Balance); // ✅ قراءة فقط: 1300",
+      "images": [],
+      "videos": [
+        "https://www.youtube.com/embed/pTB0EiLXUC8"
+      ],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "ما معنى الكبسلة (Encapsulation) في OOP؟",
+          "options": [
+            "إنشاء كلاسات متعددة في نفس الملف",
+            "إخفاء التفاصيل الداخلية وعرض واجهة عامة فقط",
+            "وراثة خصائص كلاس آخر",
+            "تعريف دوال بنفس الاسم"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 2,
+          "question": "أي access modifier يمنع الوصول للمتغير من خارج الكلاس؟",
+          "options": ["public", "protected", "private", "internal"],
+          "answer": 2
+        },
+        {
+          "id": 3,
+          "question": "ما فائدة تعريف خاصية (Property) بـ get فقط بدون set؟",
+          "options": [
+            "جعل الخاصية للقراءة فقط (لا يمكن تعديلها من الخارج)",
+            "حذف الخاصية من الكلاس",
+            "جعل الخاصية للكتابة فقط",
+            "مشاركة الخاصية مع الكلاسات الأبناء"
+          ],
+          "answer": 0
+        }
+      ]
+    }
+  ]
+}

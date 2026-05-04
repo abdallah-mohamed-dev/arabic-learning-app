@@ -1,0 +1,1052 @@
+{
+  "lessons": [
+    {
+      "id": "oop-general-intro",
+      "title": "مقدمة عامة في البرمجة الكائنية",
+      "description": "شرح نظري شامل لفكرة OOP ولماذا نستخدمها قبل التطبيق على اللغات المختلفة",
+      "content": "البرمجة الكائنية (OOP) هي طريقة لتنظيم البرامج حول كائنات تمثل بيانات وسلوكًا معًا.\n\nبدل كتابة كود طويل غير منظم، نقسم النظام إلى كائنات صغيرة لكل منها مسؤولية واضحة. هذا يساعد على:\n\n1) تنظيم الكود في وحدات منطقية.\n2) سهولة إعادة الاستخدام.\n3) سهولة الاختبار والصيانة.\n4) تقليل الأخطاء الناتجة عن التداخل.\n\nالمفاهيم الأربعة الأساسية في OOP:\n\n- الكبسلة Encapsulation: إخفاء التفاصيل الداخلية وإتاحة واجهة آمنة.\n- الوراثة Inheritance: إنشاء كلاس جديد بناءً على كلاس موجود.\n- تعدد الأشكال Polymorphism: نفس الواجهة بسلوك مختلف حسب النوع.\n- التجريد Abstraction: التركيز على المهم وإخفاء التعقيد.\n\nمتى نستخدم OOP؟\n\n- عند بناء تطبيقات كبيرة أو متوسطة.\n- عند وجود كيانات واضحة مثل: مستخدم، منتج، طلب، فاتورة.\n- عند الحاجة لتوسيع النظام مستقبلًا.\n\nمقارنة بسيطة:\n\n- الأسلوب الإجرائي: يعتمد على دوال تتعامل مع بيانات منفصلة.\n- الأسلوب الكائني: يجمع البيانات والدوال داخل كيان واحد (Class/Object).\n\nملخص:\n\nOOP ليست هدفًا بحد ذاتها، بل وسيلة لكتابة كود أوضح وقابل للتطوير. أهم نقطة هي تصميم الكلاسات بعناية بحيث تكون كل وحدة مسؤولة عن مهمة واحدة واضحة.",
+      "images": [],
+      "videos": [],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "ما الفكرة الأساسية في البرمجة الكائنية؟",
+          "options": [
+            "كتابة كل شيء داخل ملف واحد",
+            "تنظيم البرنامج حول كائنات تجمع البيانات والسلوك",
+            "منع استخدام الدوال تمامًا",
+            "الاعتماد على قواعد البيانات فقط"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 2,
+          "question": "أي خيار ليس من مبادئ OOP الأساسية؟",
+          "options": [
+            "الكبسلة",
+            "الوراثة",
+            "تعدد الأشكال",
+            "التسلسل الثنائي"
+          ],
+          "answer": 3
+        },
+        {
+          "id": 3,
+          "question": "ما فائدة OOP في المشاريع الكبيرة؟",
+          "options": [
+            "تقليل قابلية التوسع",
+            "صعوبة الصيانة",
+            "تنظيم الكود وتسهيل التعديل",
+            "منع إعادة الاستخدام"
+          ],
+          "answer": 2
+        },
+        {
+          "id": 4,
+          "question": "التجريد في OOP يعني:",
+          "options": [
+            "إظهار كل التفاصيل الدقيقة للمستخدم",
+            "إخفاء التعقيد والتركيز على الواجهة المهمة",
+            "حذف الكلاسات غير المستخدمة",
+            "تحويل الكود إلى SQL"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 5,
+          "question": "أي سيناريو يناسب OOP أكثر؟",
+          "options": [
+            "برنامج صغير جدًا بسطرين",
+            "نظام متجر يحتوي منتجات وطلبات ومستخدمين",
+            "ملف نصي ثابت بدون منطق",
+            "حساب رياضي بسيط جدًا"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+
+
+    
+    {
+      "id": "csharp-classes-objects",
+      "title": "C# — التعرف على الكلاسات والكائنات",
+      "description": "تأسيس عملي في C# لكيفية إنشاء Class وبناء Object منه",
+      "content": "في C#، الكلاس هو مخطط (Blueprint) بينما الكائن هو نسخة فعلية منه.\n\nمثال أساسي:\n\npublic class Student {\n    public string Name { get; set; }\n    public int Age { get; set; }\n\n    public void Introduce() {\n        Console.WriteLine($\"أنا {Name} وعمري {Age}\");\n    }\n}\n\nالاستخدام:\n\nStudent s1 = new Student();\ns1.Name = \"سارة\";\ns1.Age = 20;\ns1.Introduce();\n\nنقاط مهمة:\n\n- `public` يسمح بالوصول من خارج الكلاس.\n- `get; set;` تعني أن الخاصية قابلة للقراءة والكتابة.\n- `new` تنشئ كائنًا جديدًا في الذاكرة.\n\nأفضل ممارسة:\n\nابدأ بكلاس بسيط ومسؤولية واضحة، ثم أضف السلوك تدريجيًا بدل تضخم الكلاس من البداية.",
+      "images": [],
+      "videos": [],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "في C#، ما الفرق بين Class وObject؟",
+          "options": [
+            "لا يوجد فرق",
+            "Class نسخة وObject مخطط",
+            "Class مخطط وObject نسخة فعلية",
+            "Object يستخدم فقط في ASP.NET"
+          ],
+          "answer": 2
+        },
+        {
+          "id": 2,
+          "question": "ما الكلمة المفتاحية لإنشاء كائن جديد؟",
+          "options": [
+            "make",
+            "new",
+            "build",
+            "class"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 3,
+          "question": "ما وظيفة `get; set;` في الخصائص؟",
+          "options": [
+            "إلغاء الخاصية",
+            "السماح بالقراءة والكتابة",
+            "منع الكتابة والقراءة",
+            "تحويل النوع"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 4,
+          "question": "أي سطر يمثل تعريف كلاس؟",
+          "options": [
+            "Student s1 = new Student();",
+            "public class Student { }",
+            "new class Student();",
+            "Student = class;"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 5,
+          "question": "استدعاء `s1.Introduce()` يعني:",
+          "options": [
+            "إنشاء كلاس جديد",
+            "استدعاء دالة من الكائن",
+            "حذف الكائن",
+            "تحويل الكائن إلى نص"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "csharp-constructor",
+      "title": "C# — دالة المنشئ Constructor",
+      "description": "فهم دور الـ Constructor في تهيئة الكائنات بشكل صحيح",
+      "content": "الـ Constructor هي دالة خاصة تُستدعى تلقائيًا عند إنشاء الكائن.\n\nمثال:\n\npublic class Product {\n    public string Name { get; set; }\n    public double Price { get; set; }\n\n    public Product(string name, double price) {\n        Name = name;\n        Price = price;\n    }\n}\n\nProduct p = new Product(\"Laptop\", 2500);\n\nفوائد الـ Constructor:\n\n- ضمان أن الكائن يبدأ بحالة صحيحة.\n- منع نسيان الحقول الضرورية.\n- تسهيل كتابة كود واضح.\n\nيمكن وجود أكثر من Constructor (Overloading) مع معاملات مختلفة حسب الحاجة.",
+      "images": [],
+      "videos": [],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "متى يتم استدعاء Constructor في C#؟",
+          "options": [
+            "عند حذف الكائن",
+            "عند إنشاء الكائن",
+            "عند طباعة الكائن",
+            "عند إغلاق البرنامج"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 2,
+          "question": "اسم Constructor يجب أن يكون:",
+          "options": [
+            "أي اسم عشوائي",
+            "نفس اسم الكلاس",
+            "Main دائمًا",
+            "void constructor"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 3,
+          "question": "هل يمكن وجود أكثر من Constructor في نفس الكلاس؟",
+          "options": [
+            "لا",
+            "نعم عبر Overloading",
+            "فقط في Java",
+            "فقط بدون معاملات"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 4,
+          "question": "ما الفائدة الأساسية للـ Constructor؟",
+          "options": [
+            "تلوين الكود",
+            "تهيئة الكائن عند الإنشاء",
+            "تسريع الإنترنت",
+            "إلغاء الخصائص"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 5,
+          "question": "أي سطر ينشئ Product بشكل صحيح؟",
+          "options": [
+            "Product p = Product(\"Laptop\",2500);",
+            "new Product p(\"Laptop\",2500);",
+            "Product p = new Product(\"Laptop\",2500);",
+            "Product(\"Laptop\",2500) p;"
+          ],
+          "answer": 2
+        }
+      ]
+    },
+    {
+      "id": "csharp-encapsulation",
+      "title": "C# — مبدأ التغليف Encapsulation",
+      "description": "حماية بيانات الكلاس والتحكم في قراءتها وتعديلها",
+      "content": "التغليف يعني إخفاء البيانات الحساسة داخل الكلاس وإتاحة وصول مضبوط.\n\nمثال:\n\npublic class BankAccount {\n    private decimal _balance;\n\n    public decimal Balance {\n        get { return _balance; }\n    }\n\n    public void Deposit(decimal amount) {\n        if (amount > 0) _balance += amount;\n    }\n\n    public bool Withdraw(decimal amount) {\n        if (amount <= 0 || amount > _balance) return false;\n        _balance -= amount;\n        return true;\n    }\n}\n\nبهذه الطريقة لا يستطيع أي كود خارجي تعديل `_balance` مباشرة بشكل غير آمن.",
+      "images": [],
+      "videos": [],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "لماذا `_balance` تم جعله private؟",
+          "options": [
+            "لزيادة حجم الذاكرة",
+            "لمنع التعديل المباشر غير الآمن",
+            "لمنع إنشاء الكائن",
+            "لإجبار الوراثة"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 2,
+          "question": "Property `Balance` هنا تسمح بـ:",
+          "options": [
+            "القراءة فقط",
+            "الكتابة فقط",
+            "القراءة والكتابة",
+            "لا شيء"
+          ],
+          "answer": 0
+        },
+        {
+          "id": 3,
+          "question": "أي دالة مسؤولة عن زيادة الرصيد بشكل آمن؟",
+          "options": [
+            "Withdraw",
+            "Deposit",
+            "Balance",
+            "ToString"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 4,
+          "question": "جوهر Encapsulation هو:",
+          "options": [
+            "إظهار كل الحقول",
+            "إخفاء التفاصيل وتقديم واجهة آمنة",
+            "منع استخدام الكلاسات",
+            "إلغاء التحقق من المدخلات"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 5,
+          "question": "ما نتيجة `Withdraw` عند طلب مبلغ أكبر من الرصيد؟",
+          "options": [
+            "true",
+            "false",
+            "null",
+            "زيادة الرصيد"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "csharp-inheritance",
+      "title": "C# — الوراثة Inheritance",
+      "description": "كيف يرث كلاس من كلاس آخر ويعيد استخدام السلوك",
+      "content": "الوراثة تسمح بإنشاء كلاس ابن من كلاس أب.\n\nمثال:\n\npublic class Animal {\n    public string Name { get; set; }\n    public virtual void Speak() {\n        Console.WriteLine(\"صوت عام\");\n    }\n}\n\npublic class Dog : Animal {\n    public override void Speak() {\n        Console.WriteLine(\"Woof\");\n    }\n}\n\nالفائدة:\n\n- إعادة استخدام الكود.\n- تنظيم الأنواع المشتركة.\n- دعم تعدد الأشكال مع virtual/override.",
+      "images": [],
+      "videos": [],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "في C#، أي رمز يستخدم للوراثة؟",
+          "options": [
+            "=>",
+            ":",
+            "::",
+            "<-"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 2,
+          "question": "ما وظيفة `virtual` في الكلاس الأب؟",
+          "options": [
+            "منع الوراثة",
+            "السماح بإعادة التعريف في الابن",
+            "حذف الدالة",
+            "تسريع الكود فقط"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 3,
+          "question": "ما وظيفة `override` في الابن؟",
+          "options": [
+            "تعريف دالة جديدة غير مرتبطة",
+            "إعادة تعريف سلوك دالة الأب",
+            "جعل الدالة private",
+            "تغيير اسم الكلاس"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 4,
+          "question": "أي عبارة صحيحة؟",
+          "options": [
+            "Dog يرث من Animal",
+            "Animal يرث من Dog",
+            "لا توجد وراثة",
+            "الوراثة غير مدعومة في C#"
+          ],
+          "answer": 0
+        },
+        {
+          "id": 5,
+          "question": "أهم فائدة عملية للوراثة:",
+          "options": [
+            "زيادة التكرار",
+            "إعادة استخدام السلوك المشترك",
+            "إلغاء الدوال",
+            "منع التوسعة"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "csharp-polymorphism",
+      "title": "C# — تعدد الأشكال Polymorphism",
+      "description": "تنفيذ نفس الواجهة بسلوك مختلف حسب نوع الكائن",
+      "content": "تعدد الأشكال يعني أن مرجعًا عامًا يمكنه التعامل مع أنواع مختلفة بسلوك مناسب لكل نوع.\n\nمثال:\n\npublic class Animal {\n    public virtual void Speak() {\n        Console.WriteLine(\"...\");\n    }\n}\n\npublic class Cat : Animal {\n    public override void Speak() {\n        Console.WriteLine(\"Meow\");\n    }\n}\n\npublic class Dog : Animal {\n    public override void Speak() {\n        Console.WriteLine(\"Woof\");\n    }\n}\n\nList<Animal> animals = new List<Animal> { new Cat(), new Dog() };\nforeach (var a in animals) {\n    a.Speak();\n}\n\nرغم أن النوع المرجعي Animal، السلوك الفعلي يختلف حسب نوع الكائن الحقيقي.",
+      "images": [],
+      "videos": [],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "ما مفهوم Polymorphism؟",
+          "options": [
+            "سلوك واحد لكل الأنواع",
+            "نفس الواجهة بسلوك مختلف حسب النوع",
+            "منع الوراثة",
+            "إلغاء الدوال"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 2,
+          "question": "أي زوج كلمات مفتاحية يدعم التعدد في C#؟",
+          "options": [
+            "static / const",
+            "virtual / override",
+            "using / namespace",
+            "private / public"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 3,
+          "question": "في foreach على `List<Animal>`، لماذا تختلف النتائج؟",
+          "options": [
+            "بسبب ترتيب القائمة فقط",
+            "لأن كل كائن ينفذ Speak الخاصة به",
+            "لأن Console.WriteLine عشوائية",
+            "لأن Cat يرث من Dog"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 4,
+          "question": "إذا لم تكن Speak في الأب virtual:",
+          "options": [
+            "لن يمكن override الصحيح",
+            "لن يتغير شيء",
+            "سيتوقف البرنامج دائمًا",
+            "ستعمل فقط في JavaScript"
+          ],
+          "answer": 0
+        },
+        {
+          "id": 5,
+          "question": "الفائدة الأساسية لتعدد الأشكال:",
+          "options": [
+            "تقييد التصميم",
+            "كتابة كود مرن يتعامل مع عدة أنواع",
+            "منع التوسع",
+            "زيادة التكرار"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+ 
+
+
+    {
+      "id": "js-classes-objects",
+      "title": "JavaScript — الكلاسات والكائنات",
+      "description": "فهم OOP في JavaScript باستخدام class وconstructor",
+      "content": "في JavaScript الحديثة (ES6)، يمكن استخدام `class` لكتابة كود كائني بشكل واضح.\n\nمثال:\n\nclass Student {\n  constructor(name, age) {\n    this.name = name;\n    this.age = age;\n  }\n\n  introduce() {\n    console.log(`أنا ${this.name} وعمري ${this.age}`);\n  }\n}\n\nconst s1 = new Student('ليان', 19);\ns1.introduce();\n\nمفاهيم أساسية:\n\n- `constructor` تُنفذ عند إنشاء كائن.\n- `this` تشير إلى الكائن الحالي.\n- يمكن إضافة دوال داخل الكلاس وتستخدمها كل الكائنات.\n\nملاحظة:\n\nJavaScript تعتمد على prototype تحت الغطاء، لكن `class` تجعل الصياغة أوضح وأسهل للتعلم.",
+      "images": [],
+      "videos": [],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "في JavaScript، أين نضع تهيئة الخصائص الأولية؟",
+          "options": [
+            "داخل import",
+            "داخل constructor",
+            "داخل export",
+            "داخل return"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 2,
+          "question": "ماذا تعني `this` داخل الكلاس؟",
+          "options": [
+            "الملف الحالي",
+            "المتصفح",
+            "الكائن الحالي",
+            "الخادم"
+          ],
+          "answer": 2
+        },
+        {
+          "id": 3,
+          "question": "أي سطر صحيح لإنشاء كائن؟",
+          "options": [
+            "const s = Student();",
+            "const s = new Student('أحمد', 22);",
+            "new class Student;",
+            "Student.new();"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 4,
+          "question": "دالة `introduce()` داخل class تعتبر:",
+          "options": [
+            "property ثابتة",
+            "method (دالة عضو)",
+            "constructor بديل",
+            "callback إجبارية"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 5,
+          "question": "صيغة class في JS تم تقديمها بوضوح في:",
+          "options": [
+            "ES6",
+            "PHP 8",
+            "C# 2",
+            "HTML5"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "js-constructor",
+      "title": "JavaScript — constructor داخل class",
+      "description": "كيفية تهيئة الخصائص مباشرة عند إنشاء الكائن في JS",
+      "content": "في JavaScript، الـ constructor هي دالة خاصة داخل class تُستدعى تلقائيًا عند `new`.\n\nمثال:\n\nclass Product {\n  constructor(name, price) {\n    this.name = name;\n    this.price = price;\n  }\n\n  getInfo() {\n    return `${this.name} - ${this.price}`;\n  }\n}\n\nconst p = new Product('Mouse', 120);\nconsole.log(p.getInfo());\n\nنصائح:\n\n- تحقق من صحة المدخلات داخل constructor عند الحاجة.\n- اجعل constructor بسيطة، ولا تضع فيها منطقًا ضخمًا.",
+      "images": [],
+      "videos": [],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "في JS، `constructor` تُستدعى عند:",
+          "options": [
+            "import الكلاس",
+            "استدعاء `new`",
+            "حذف الكائن",
+            "حفظ الملف"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 2,
+          "question": "أي سطر صحيح لإنشاء Product؟",
+          "options": [
+            "const p = Product('Mouse',120);",
+            "const p = new Product('Mouse',120);",
+            "Product.new('Mouse',120);",
+            "new class Product('Mouse',120);"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 3,
+          "question": "`this.price = price` تعني:",
+          "options": [
+            "نسخ قيمة الوسيط إلى خاصية الكائن",
+            "حذف الخاصية",
+            "تحويل إلى نص",
+            "إنشاء متغير عالمي"
+          ],
+          "answer": 0
+        },
+        {
+          "id": 4,
+          "question": "كم constructor مسموح داخل class في JS؟",
+          "options": [
+            "واحد فقط",
+            "غير محدود",
+            "اثنان فقط",
+            "لا يوجد constructor"
+          ],
+          "answer": 0
+        },
+        {
+          "id": 5,
+          "question": "أفضل ممارسة مع constructor:",
+          "options": [
+            "تجنبها دائمًا",
+            "جعلها واضحة ومختصرة",
+            "وضع كل منطق المشروع داخلها",
+            "استخدامها في HTML"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "js-encapsulation",
+      "title": "JavaScript — التغليف Encapsulation",
+      "description": "استخدام الخصائص الخاصة وواجهات آمنة في JavaScript",
+      "content": "في JavaScript الحديثة يمكن استخدام private fields باستخدام `#`.\n\nمثال:\n\nclass BankAccount {\n  #balance = 0;\n\n  deposit(amount) {\n    if (amount > 0) this.#balance += amount;\n  }\n\n  getBalance() {\n    return this.#balance;\n  }\n}\n\nconst acc = new BankAccount();\nacc.deposit(500);\nconsole.log(acc.getBalance());\n\nالفكرة: لا يمكن الوصول إلى `#balance` من خارج الكلاس مباشرة، وهذا يحقق التغليف.",
+      "images": [],
+      "videos": [],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "ما معنى وجود `#balance` في JS؟",
+          "options": [
+            "خاصية عامة",
+            "خاصية خاصة private field",
+            "تعليق",
+            "متغير global"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 2,
+          "question": "كيف نقرأ الرصيد بشكل آمن في المثال؟",
+          "options": [
+            "acc.#balance",
+            "acc.balance",
+            "acc.getBalance()",
+            "BankAccount.balance"
+          ],
+          "answer": 2
+        },
+        {
+          "id": 3,
+          "question": "التغليف يساعد على:",
+          "options": [
+            "إلغاء التحقق من المدخلات",
+            "حماية الحالة الداخلية للكائن",
+            "منع إنشاء كائنات",
+            "إيقاف جميع الدوال"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 4,
+          "question": "دالة `deposit` في المثال:",
+          "options": [
+            "تعدل الرصيد دون شروط",
+            "تعدل الرصيد عندما amount > 0",
+            "تحذف الرصيد",
+            "لا علاقة لها بالرصيد"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 5,
+          "question": "إذا حاولت `acc.#balance` خارج class:",
+          "options": [
+            "يعمل طبيعيًا",
+            "يرجع undefined",
+            "يسبب خطأ لأن الحقل خاص",
+            "يحذف الكائن"
+          ],
+          "answer": 2
+        }
+      ]
+    },
+    {
+      "id": "js-inheritance",
+      "title": "JavaScript — الوراثة Inheritance",
+      "description": "استخدام extends وsuper لبناء تسلسل هرمي للكلاسات",
+      "content": "في JavaScript نستخدم `extends` لوراثة class من class آخر.\n\nمثال:\n\nclass Animal {\n  constructor(name) {\n    this.name = name;\n  }\n\n  speak() {\n    console.log('صوت عام');\n  }\n}\n\nclass Dog extends Animal {\n  constructor(name, breed) {\n    super(name);\n    this.breed = breed;\n  }\n\n  speak() {\n    console.log('Woof');\n  }\n}\n\n`super` تستدعي constructor الأب قبل استخدام this في الابن.",
+      "images": [],
+      "videos": [],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "في JS، ما الكلمة المستخدمة للوراثة؟",
+          "options": [
+            "inherits",
+            "extends",
+            "implement",
+            "superclass"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 2,
+          "question": "ما دور `super(name)` في constructor الابن؟",
+          "options": [
+            "يحذف خصائص الأب",
+            "يستدعي constructor الأب",
+            "ينشئ class جديد",
+            "يمنع this"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 3,
+          "question": "إعادة تعريف `speak()` في Dog تمثل:",
+          "options": [
+            "تجريد",
+            "تعدد أشكال/override",
+            "تغليف",
+            "واجهة"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 4,
+          "question": "أي عبارة صحيحة؟",
+          "options": [
+            "Dog extends Animal",
+            "Animal extends Dog",
+            "Dog super Animal فقط",
+            "JS لا تدعم الوراثة"
+          ],
+          "answer": 0
+        },
+        {
+          "id": 5,
+          "question": "لماذا نستخدم الوراثة؟",
+          "options": [
+            "لتكرار نفس الكود",
+            "لمشاركة السلوك بين الأنواع",
+            "لمنع إعادة الاستخدام",
+            "لإلغاء الدوال"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "js-polymorphism",
+      "title": "JavaScript — تعدد الأشكال Polymorphism",
+      "description": "نفس اسم الدالة وسلوك مختلف في الكلاسات الموروثة",
+      "content": "في JS، تعدد الأشكال يظهر عند إعادة تعريف methods في كلاسات أبناء.\n\nمثال:\n\nclass Shape {\n  area() {\n    return 0;\n  }\n}\n\nclass Rectangle extends Shape {\n  constructor(w, h) {\n    super();\n    this.w = w;\n    this.h = h;\n  }\n\n  area() {\n    return this.w * this.h;\n  }\n}\n\nclass Circle extends Shape {\n  constructor(r) {\n    super();\n    this.r = r;\n  }\n\n  area() {\n    return Math.PI * this.r * this.r;\n  }\n}\n\nconst shapes = [new Rectangle(4, 5), new Circle(3)];\nshapes.forEach(s => console.log(s.area()));\n\nالاستدعاء واحد (`area`) لكن التنفيذ مختلف حسب النوع.",
+      "images": [],
+      "videos": [],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "في المثال، ما الدالة المشتركة بين Shape والأبناء؟",
+          "options": [
+            "draw",
+            "print",
+            "area",
+            "size"
+          ],
+          "answer": 2
+        },
+        {
+          "id": 2,
+          "question": "لماذا تختلف قيمة `area()` لكل كائن؟",
+          "options": [
+            "بسبب اختلاف override حسب النوع",
+            "بسبب ترتيب المصفوفة فقط",
+            "لأن JS عشوائية",
+            "لأن Shape لا تعمل"
+          ],
+          "answer": 0
+        },
+        {
+          "id": 3,
+          "question": "أي مفهوم يمثله المثال؟",
+          "options": [
+            "Encapsulation فقط",
+            "Polymorphism",
+            "Namespace",
+            "Recursion"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 4,
+          "question": "ما فائدة هذا الأسلوب عمليًا؟",
+          "options": [
+            "تعطيل التوسعة",
+            "التعامل مع أنواع متعددة بواجهة موحدة",
+            "زيادة التكرار",
+            "منع استخدام الكلاسات"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 5,
+          "question": "السطر `shapes.forEach(s => s.area())` يوضح:",
+          "options": [
+            "استدعاء موحد وسلوك متعدد",
+            "خطأ نحوي",
+            "عدم وجود وراثة",
+            "حذف الكائنات"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+
+    
+    {
+      "id": "php-classes-objects",
+      "title": "PHP — الكلاسات والكائنات",
+      "description": "تعلم أساس OOP في PHP: تعريف Class وإنشاء Object",
+      "content": "في PHP، نستخدم `class` لتعريف القالب ثم ننشئ كائنات باستخدام `new`.\n\nمثال:\n\nclass Student {\n    public string $name;\n    public int $age;\n\n    public function introduce(): void {\n        echo \"أنا {$this->name} وعمري {$this->age}\";\n    }\n}\n\n$s1 = new Student();\n$s1->name = 'مريم';\n$s1->age = 21;\n$s1->introduce();\n\nالنقاط الأساسية:\n\n- الوصول لخصائص الكائن يكون بـ `->`.\n- `public` تسمح بالوصول من خارج الكلاس.\n- يمكن إضافة أنواع للخصائص في PHP الحديثة.",
+      "images": [],
+      "videos": [],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "ما الرمز المستخدم للوصول لخاصية كائن في PHP؟",
+          "options": [
+            "::",
+            "->",
+            ".",
+            "#"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 2,
+          "question": "ما الكلمة المفتاحية لإنشاء كائن؟",
+          "options": [
+            "create",
+            "instance",
+            "new",
+            "make"
+          ],
+          "answer": 2
+        },
+        {
+          "id": 3,
+          "question": "أي تعريف صحيح لدالة داخل كلاس في PHP؟",
+          "options": [
+            "method introduce() {}",
+            "public function introduce() {}",
+            "func introduce() {}",
+            "define introduce() {}"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 4,
+          "question": "ما وظيفة `public`؟",
+          "options": [
+            "منع الوصول الخارجي",
+            "السماح بالوصول من أي مكان مناسب",
+            "حذف الخاصية",
+            "إنشاء كائن"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 5,
+          "question": "في PHP، `$this` تشير إلى:",
+          "options": [
+            "السيرفر",
+            "الدالة العالمية",
+            "الكائن الحالي",
+            "اسم الملف"
+          ],
+          "answer": 2
+        }
+      ]
+    },
+    {
+      "id": "php-constructor",
+      "title": "PHP — __construct والتهيئة",
+      "description": "تعلم كيف تعمل دالة __construct في PHP لتهيئة الكائنات",
+      "content": "في PHP، الـ constructor اسمها الخاص هو `__construct`.\n\nمثال:\n\nclass Product {\n    public string $name;\n    public float $price;\n\n    public function __construct(string $name, float $price) {\n        $this->name = $name;\n        $this->price = $price;\n    }\n}\n\n$p = new Product('Keyboard', 350);\n\nالفائدة:\n\n- يضمن أن كل كائن لديه قيم أساسية منذ البداية.\n- يقلل الأخطاء الناتجة عن خصائص غير مهيأة.",
+      "images": [],
+      "videos": [],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "ما اسم constructor في PHP؟",
+          "options": [
+            "__init",
+            "__start",
+            "__construct",
+            "constructor"
+          ],
+          "answer": 2
+        },
+        {
+          "id": 2,
+          "question": "متى تُستدعى `__construct`؟",
+          "options": [
+            "عند استدعاء new",
+            "عند إغلاق الصفحة",
+            "عند حذف الكلاس",
+            "عند include"
+          ],
+          "answer": 0
+        },
+        {
+          "id": 3,
+          "question": "الفائدة الأساسية من constructor:",
+          "options": [
+            "تجميل واجهة المستخدم",
+            "تهيئة الخصائص الأساسية",
+            "تشفير قاعدة البيانات",
+            "تعطيل الكائن"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 4,
+          "question": "أي سطر صحيح لإنشاء Product في المثال؟",
+          "options": [
+            "$p = Product('Keyboard', 350);",
+            "$p = new Product('Keyboard', 350);",
+            "new $p Product('Keyboard', 350);",
+            "$p => new Product('Keyboard', 350);"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 5,
+          "question": "`$this->name = $name;` تعني:",
+          "options": [
+            "تعيين خاصية الكائن من وسيط الدالة",
+            "حذف الخاصية name",
+            "إنشاء متغير عام",
+            "إيقاف الكلاس"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "php-encapsulation",
+      "title": "PHP — التغليف Encapsulation",
+      "description": "استخدام private + getter/setter للتحكم في البيانات",
+      "content": "في PHP، نحقق التغليف بجعل الخصائص `private` ثم توفير دوال للوصول الآمن.\n\nمثال:\n\nclass BankAccount {\n    private float $balance = 0;\n\n    public function deposit(float $amount): void {\n        if ($amount > 0) {\n            $this->balance += $amount;\n        }\n    }\n\n    public function getBalance(): float {\n        return $this->balance;\n    }\n}\n\nبهذا لا يمكن تعديل `balance` مباشرة من الخارج.",
+      "images": [],
+      "videos": [],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "أي modifier يستخدم لإخفاء الخاصية داخل الكلاس؟",
+          "options": [
+            "public",
+            "protected",
+            "private",
+            "global"
+          ],
+          "answer": 2
+        },
+        {
+          "id": 2,
+          "question": "ما الطريقة الصحيحة لقراءة الرصيد في المثال؟",
+          "options": [
+            "$acc->balance",
+            "$acc->getBalance()",
+            "BankAccount::balance",
+            "$acc.balance"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 3,
+          "question": "لماذا نستخدم deposit بدل تعديل الرصيد مباشرة؟",
+          "options": [
+            "لإضافة شروط تحقق",
+            "لإبطاء البرنامج",
+            "لإلغاء OOP",
+            "لا يوجد سبب"
+          ],
+          "answer": 0
+        },
+        {
+          "id": 4,
+          "question": "التغليف في PHP يعني:",
+          "options": [
+            "إظهار كل الحقول",
+            "حماية البيانات خلف واجهة",
+            "حذف الدوال",
+            "استخدام SQL فقط"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 5,
+          "question": "إذا كانت الخاصية private، الوصول المباشر من الخارج:",
+          "options": [
+            "مسموح",
+            "يسبب خطأ",
+            "يعيد 0 دائمًا",
+            "يحذف الخاصية"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "php-inheritance",
+      "title": "PHP — الوراثة Inheritance",
+      "description": "تعلم extends وoverride في PHP لبناء كود قابل للتوسعة",
+      "content": "في PHP، نستخدم `extends` لإنشاء كلاس ابن.\n\nمثال:\n\nclass Animal {\n    public function speak(): void {\n        echo 'صوت عام';\n    }\n}\n\nclass Dog extends Animal {\n    public function speak(): void {\n        echo 'Woof';\n    }\n}\n\n$d = new Dog();\n$d->speak();\n\nهذا يسمح بإعادة استخدام الكود العام وتخصيص السلوك حسب النوع.",
+      "images": [],
+      "videos": [],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "ما الكلمة المستخدمة للوراثة في PHP؟",
+          "options": [
+            "inherit",
+            "extends",
+            "super",
+            "include"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 2,
+          "question": "عند إعادة تعريف `speak` في الابن:",
+          "options": [
+            "يحدث تخصيص للسلوك",
+            "تتوقف الوراثة",
+            "يحذف الكلاس الأب",
+            "يمنع إنشاء الكائن"
+          ],
+          "answer": 0
+        },
+        {
+          "id": 3,
+          "question": "أي سطر ينشئ كائنًا من Dog؟",
+          "options": [
+            "$d = Dog();",
+            "$d = new Dog();",
+            "Dog $d = new;",
+            "$d => Dog();"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 4,
+          "question": "الوراثة تساعد على:",
+          "options": [
+            "تكرار الكود",
+            "إعادة استخدام السلوك",
+            "إلغاء الكلاسات",
+            "منع التوسعة"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 5,
+          "question": "في المثال، Dog بالنسبة لـ Animal هو:",
+          "options": [
+            "Parent",
+            "Derived/Child",
+            "Interface",
+            "Trait"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "php-polymorphism",
+      "title": "PHP — تعدد الأشكال Polymorphism",
+      "description": "واجهة مشتركة أو كلاس أب وتنفيذ مختلف لكل نوع",
+      "content": "في PHP يمكن تطبيق تعدد الأشكال عبر inheritance أو interfaces.\n\nمثال باستخدام interface:\n\ninterface PaymentMethod {\n    public function pay(float $amount): string;\n}\n\nclass CashPayment implements PaymentMethod {\n    public function pay(float $amount): string {\n        return \"تم الدفع نقدًا: $amount\";\n    }\n}\n\nclass CardPayment implements PaymentMethod {\n    public function pay(float $amount): string {\n        return \"تم الدفع بالبطاقة: $amount\";\n    }\n}\n\nfunction processPayment(PaymentMethod $method, float $amount): void {\n    echo $method->pay($amount);\n}\n\nنفس الدالة `processPayment` تعمل مع أكثر من نوع دفع.",
+      "images": [],
+      "videos": [],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "في المثال، ما دور interface `PaymentMethod`؟",
+          "options": [
+            "تخزين البيانات فقط",
+            "تعريف عقد (method) موحد للتنفيذ",
+            "إنشاء كائن مباشرة",
+            "حذف الكلاسات"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 2,
+          "question": "أي كلاس يطبق `PaymentMethod`؟",
+          "options": [
+            "CashPayment وCardPayment",
+            "processPayment فقط",
+            "float",
+            "echo"
+          ],
+          "answer": 0
+        },
+        {
+          "id": 3,
+          "question": "لماذا `processPayment` تقبل أنواع دفع مختلفة؟",
+          "options": [
+            "لأنها تستقبل interface مشترك",
+            "لأن PHP لا تتحقق من الأنواع",
+            "بسبب random",
+            "لأن Card يرث من Cash"
+          ],
+          "answer": 0
+        },
+        {
+          "id": 4,
+          "question": "هذا المثال يعبّر عن:",
+          "options": [
+            "Encapsulation فقط",
+            "Polymorphism",
+            "Static typing فقط",
+            "Recursion"
+          ],
+          "answer": 1
+        },
+        {
+          "id": 5,
+          "question": "ميزة التعدد هنا:",
+          "options": [
+            "صعوبة إضافة نوع دفع جديد",
+            "سهولة إضافة نوع جديد دون تغيير كبير في المعالجة",
+            "منع التوسعة",
+            "تعقيد واجهة الدالة"
+          ],
+          "answer": 1
+        }
+      ]
+    }
+  ]
+}
