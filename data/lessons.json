@@ -5,8 +5,8 @@
       "title": "مقدمة عامة في البرمجة الكائنية",
       "description": "شرح نظري شامل لفكرة OOP ولماذا نستخدمها قبل التطبيق على اللغات المختلفة",
       "content": "البرمجة الكائنية (OOP) هي طريقة لتنظيم البرامج حول كائنات تمثل بيانات وسلوكًا معًا.\n\nبدل كتابة كود طويل غير منظم، نقسم النظام إلى كائنات صغيرة لكل منها مسؤولية واضحة. هذا يساعد على:\n\n1) تنظيم الكود في وحدات منطقية.\n2) سهولة إعادة الاستخدام.\n3) سهولة الاختبار والصيانة.\n4) تقليل الأخطاء الناتجة عن التداخل.\n\nالمفاهيم الأربعة الأساسية في OOP:\n\n- الكبسلة Encapsulation: إخفاء التفاصيل الداخلية وإتاحة واجهة آمنة.\n- الوراثة Inheritance: إنشاء كلاس جديد بناءً على كلاس موجود.\n- تعدد الأشكال Polymorphism: نفس الواجهة بسلوك مختلف حسب النوع.\n- التجريد Abstraction: التركيز على المهم وإخفاء التعقيد.\n\nمتى نستخدم OOP؟\n\n- عند بناء تطبيقات كبيرة أو متوسطة.\n- عند وجود كيانات واضحة مثل: مستخدم، منتج، طلب، فاتورة.\n- عند الحاجة لتوسيع النظام مستقبلًا.\n\nمقارنة بسيطة:\n\n- الأسلوب الإجرائي: يعتمد على دوال تتعامل مع بيانات منفصلة.\n- الأسلوب الكائني: يجمع البيانات والدوال داخل كيان واحد (Class/Object).\n\nملخص:\n\nOOP ليست هدفًا بحد ذاتها، بل وسيلة لكتابة كود أوضح وقابل للتطوير. أهم نقطة هي تصميم الكلاسات بعناية بحيث تكون كل وحدة مسؤولة عن مهمة واحدة واضحة.",
-      "images": [],
-      "videos": [],
+      "images": ["https://substackcdn.com/image/fetch/$s_!obIZ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7c56f17b-aaa7-4472-a65f-c7767ec5f243_1412x1062.png"],
+      "videos": ["https://youtu.be/rKaTfSM5tsQ?si=8osvxAq_utbZJu1-"],
       "quiz": [
         {
           "id": 1,
@@ -73,8 +73,8 @@
       "title": "C# — التعرف على الكلاسات والكائنات",
       "description": "تأسيس عملي في C# لكيفية إنشاء Class وبناء Object منه",
       "content": "في C#، الكلاس هو مخطط (Blueprint) بينما الكائن هو نسخة فعلية منه.\n\nمثال أساسي:\n\npublic class Student {\n    public string Name { get; set; }\n    public int Age { get; set; }\n\n    public void Introduce() {\n        Console.WriteLine($\"أنا {Name} وعمري {Age}\");\n    }\n}\n\nالاستخدام:\n\nStudent s1 = new Student();\ns1.Name = \"سارة\";\ns1.Age = 20;\ns1.Introduce();\n\nنقاط مهمة:\n\n- `public` يسمح بالوصول من خارج الكلاس.\n- `get; set;` تعني أن الخاصية قابلة للقراءة والكتابة.\n- `new` تنشئ كائنًا جديدًا في الذاكرة.\n\nأفضل ممارسة:\n\nابدأ بكلاس بسيط ومسؤولية واضحة، ثم أضف السلوك تدريجيًا بدل تضخم الكلاس من البداية.",
-      "images": [],
-      "videos": [],
+      "images": ["https://i.ytimg.com/vi/_ay6V9CZYuw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD3hGoOCenGZxAFeXrMCryQP8pf7w"],
+      "videos": ["https://youtu.be/uxIZ23K5dEk?si=3HseuoWFn1c_jE0a"],
       "quiz": [
         {
           "id": 1,
